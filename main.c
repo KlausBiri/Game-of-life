@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <string.h>
 #include <time.h>
 #ifdef _WIN32
     #include <windows.h>
+#include <conio.h>
+
 #endif
 
 #include "debugmalloc.h"
@@ -90,14 +91,15 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
         return false;
     }
 
-    int ujxmeret = 0;
-    int ujymeret = 0;
+    int ujxmeret = 1;
+    int ujymeret = 1;
     char c;
 
     while((c = fgetc(file)) != EOF){
         if(c == '\n') {
             ujxmeret++;
             printf("\n");
+            ujymeret=0;
         }else{
             ujymeret++;
             printf("%c",c);
@@ -112,6 +114,7 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
     }
     rewind(file);
     int x = 0, y = 0;
+
     while((c = fgetc(file)) != EOF){
         if(c == '\n'){
             x++;
@@ -119,7 +122,6 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
         }else{
             Tablazat->sejtek[x][y] = c;
             y++;
-
         }
     }
 
@@ -162,6 +164,8 @@ int main() {
     int Menupont;
     bool Eletter_nemures = false;
     char filename[100];
+
+    loadFromFile(&Tablazat, "alap.txt");
 
     while(1){
         clearScreen();
