@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1699526970 source:c:\users\bmiki\onedrive\dokumentumok\lpo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<time.h>
+	<windows.h>
+	"debugmalloc.h"
+
+1695663937 c:\users\bmiki\onedrive\dokumentumok\lpo\debugmalloc.h
+	<stdbool.h>
+	<stddef.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdarg.h>
+	<process.h>
+	<unistd.h>
+
+1699489065 source:c:\users\bmiki\onedrive\dokumentumok\lpo\fugvenyek.c
+
