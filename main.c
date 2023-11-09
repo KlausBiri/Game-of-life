@@ -112,7 +112,6 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
     for(int i = 0; i < Tablazat->sizeX; i++){
         Tablazat->sejtek[i] = (char*)malloc(Tablazat->sizeY * sizeof(char));
     }
-    printf("x:%d y:%d",Tablazat->sizeX, Tablazat->sizeY);
     rewind(file);
     int x = 0, y = 0;
 
