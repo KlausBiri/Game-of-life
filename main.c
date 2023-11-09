@@ -90,14 +90,15 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
         return false;
     }
 
-    int ujxmeret = 0;
-    int ujymeret = 0;
+    int ujxmeret = 1;
+    int ujymeret = 1;
     char c;
 
     while((c = fgetc(file)) != EOF){
         if(c == '\n') {
             ujxmeret++;
             printf("\n");
+            ujymeret=0;
         }else{
             ujymeret++;
             printf("%c",c);
@@ -110,8 +111,10 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
     for(int i = 0; i < Tablazat->sizeX; i++){
         Tablazat->sejtek[i] = (char*)malloc(Tablazat->sizeY * sizeof(char));
     }
+    printf("x:%d y:%d",Tablazat->sizeX, Tablazat->sizeY);
     rewind(file);
     int x = 0, y = 0;
+
     while((c = fgetc(file)) != EOF){
         if(c == '\n'){
             x++;
@@ -119,7 +122,6 @@ bool loadFromFile(Eletter *Tablazat, char *filename) {
         }else{
             Tablazat->sejtek[x][y] = c;
             y++;
-
         }
     }
 
@@ -162,6 +164,8 @@ int main() {
     int Menupont;
     bool Eletter_nemures = false;
     char filename[100];
+
+    loadFromFile(&Tablazat, "alap.txt");
 
     while(1){
         clearScreen();
