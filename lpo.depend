@@ -1,10 +1,14 @@
 # depslib dependency file v1.0
-1699526970 source:c:\users\bmiki\onedrive\dokumentumok\lpo\main.c
+1700655880 source:c:\users\bmiki\onedrive\dokumentumok\lpo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
 	<string.h>
 	<time.h>
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	"Fugvenyek.h"
 	<windows.h>
 	"debugmalloc.h"
 
@@ -19,5 +23,12 @@
 	<process.h>
 	<unistd.h>
 
-1699489065 source:c:\users\bmiki\onedrive\dokumentumok\lpo\fugvenyek.c
+1700659762 source:c:\users\bmiki\onedrive\dokumentumok\lpo\fugvenyek.c
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<time.h>
+	"Fugvenyek.h"
+
+1700655727 c:\users\bmiki\onedrive\dokumentumok\lpo\fugvenyek.h
 
